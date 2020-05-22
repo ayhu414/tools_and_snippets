@@ -1,4 +1,4 @@
-'''
+
 from mrjob.job import MRJob
 import re
 
@@ -24,10 +24,3 @@ class MRAtLeastOnce(MRJob):
 
 if __name__ == "__main__":
     MRAtLeastOnce.run()
-
-'''
-
-lst = ['A','V','V','A','S',1,2,3,4,5,5,5]
-
-if __name__ == "__main__":
-    print(set(lst))

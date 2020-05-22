@@ -6,7 +6,7 @@ class MRTenTimes(MRJob):
     def mapper(self, _, line):
         entry = line.split(",")
         full_name = (entry[0],entry[1])
-        #^BUG INSTANCE, note to use entry, NOT line
+        #^ INSTANCE, note to use entry, NOT line
         yield full_name, 1
 
     def combiner(self, full_name, count):
@@ -18,7 +18,7 @@ class MRTenTimes(MRJob):
         final = sum(total)
 
         if final>=10:
-        #^BUG INSTANCE, note to check conditions ">="
+        #^ INSTANCE, note to check conditions ">="
             yield full_name, final
 
 if __name__ == "__main__":
